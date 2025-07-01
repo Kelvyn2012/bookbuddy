@@ -1,7 +1,7 @@
 from flask import Blueprint, jsonify, request
 from db import get_db_connection
 
-customer_routes = Blueprint('customer_routes', __name__)  # <- THIS line is important
+customer_routes = Blueprint('customer_routes', __name__)  
 
 @customer_routes.route('/customers', methods=['GET'])
 def get_customers():
