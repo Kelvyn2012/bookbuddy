@@ -32,7 +32,7 @@ def create_order():
     )
     order_id = cursor.lastrowid
 
-    for item in data['items']:  # items = [{book_id: X, quantity: Y}]
+    for item in data['items']:  
         cursor.execute(
             "INSERT INTO order_details (order_id, book_id, quantity) VALUES (%s, %s, %s)",
             (order_id, item['book_id'], item['quantity'])
